@@ -1,0 +1,89 @@
+<?php
+
+
+    $nomes = array();
+    $nomes[0] = "emerson";
+    $nomes[1] = "alex";
+    $nomes[2] = "andressa";
+    $nomes[3] = "marcos";
+    $nomes[4] = true;
+    $nomes[10] = 29;
+
+    echo "valor que esta na posição 3" . $nomes[3];
+
+    $nomes[3] = "mikael";
+
+    echo "<p>valor que esta na posição 3" . $nomes[3];
+    echo "<br>";
+    print_r($nomes);
+    echo "<br>";
+    echo "<br/>";
+    
+
+    var_dump($nomes);
+
+    foreach ($nomes as $indice => $value) 
+    {
+        echo"<p> $indice = $value </p>";
+    }
+
+    for ($i=0; $i < count($nomes); $i++) { 
+        echo "<p>$nomes[$i] </p>";
+    }
+
+    reset($nomes);
+    do {
+        echo "<p>".current($nomes)."</p>";
+    } while (next($nomes));
+
+    echo "<hr>";
+    $nome = array();
+    $nome[0] = "paulo";
+    $nome["cor"] = "vermelho";
+    $nome[1] = "30";
+
+    var_dump($nome);
+    echo $nome["cor"];
+
+
+    $meses = array
+    (
+         "A" => "janeiro",
+         "B" => "fevereiro",
+         "C" => "março"
+
+         
+    );
+
+    echo"<br>".$meses["B"];
+
+    $mularray = array 
+    (
+        array("emerson", 38),//0
+        array("thales", 20),//1
+        array("joao", 25),//2
+    );
+
+    print_r($mularray);
+
+    echo"<br>".$mularray[2][0];
+
+    $arraymul = 
+    [
+        "001" =>
+        [
+            "nome" => "abner",
+            "end"=>"x", 
+            "tel"=>
+            [
+            "(11)00000-0000",
+            "(11)11111-1111"
+            ]
+        ]
+    ];
+
+    print_r($arraymul);
+
+    echo "<br>". $arraymul["001"]["tel"][0];
+
+?>
